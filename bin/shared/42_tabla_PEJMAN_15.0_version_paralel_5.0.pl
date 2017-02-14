@@ -946,6 +946,7 @@ my $NMD_derived_def="NaN";
 			foreach my $NMD_derived_tok(sort keys %{$hash2{$CHROM_tok}{$SYMBOL_tok}{$POS_tok}{$REF_tok}{$ALT_tok}{$Effect_tok_definitive}{$CCDS_tok}{'NMD_derived'}})
 			{
 				#~ $NMD_def=$NMD_derived_tok; # This is the line that was problematic
+				if($NMD_derived_tok ne 'NaN'){$NMD_def=$NMD_derived_tok;}
 				$NMD_derived_def=$NMD_derived_tok;
 				#~ print "NMD_derived:$NMD_derived_tok\t$SYMBOL_tok\n";
 			}#derived
